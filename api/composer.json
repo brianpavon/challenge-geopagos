@@ -3,7 +3,11 @@
     "autoload": {
         "psr-4": {
             "Brian\\Api\\": "src/",
-            "Config\\":"config/"
+            "Config\\":"config/",
+            "Components\\":"src/Components",
+            "Models\\":"src/Models",
+            "Controllers\\":"src/Controllers",
+            "Middlewares\\": "src/Middlewares"
         }
     },
     "require": {

@@ -6,7 +6,7 @@ use Illuminate\Events\Dispatcher;
 use Illuminate\Container\Container;
 
 class Database{
-    public function __constructor(){
+    public function __construct(){
         $capsule = new Capsule;
         
         $capsule->addConnection([

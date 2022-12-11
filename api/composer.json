@@ -1,0 +1,15 @@
+{
+    "name": "brian/api",
+    "autoload": {
+        "psr-4": {
+            "Brian\\Api\\": "src/",
+            "Config\\":"config/"
+        }
+    },
+    "require": {
+        "slim/slim": "4.*",
+        "slim/psr7": "^1.6",
+        "illuminate/database": "^8.83",
+        "illuminate/events": "^8.83"
+    }
+}

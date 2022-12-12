@@ -10,6 +10,7 @@ use Middlewares\CorsMiddleware;
 use Components\GenericResponse;
 
 use Controllers\PlayerController;
+use Models\Tournament;
 
 require __DIR__ . '/../vendor/autoload.php';
 
@@ -24,6 +25,11 @@ $app->get('/', function (Request $request, Response $response, $args) {
 
 $app->group('/players',function(RouteCollectorProxy $group){
     $group->get('[/]',PlayerController::class.":getAll");
+    $group->post('/add-player',PlayerController::class.":addPlayer");
+});
+
+$app->group('/tournament',function(RouteCollectorProxy $group){
+    $group->get('/start/{gender}',TournamentController::class.":startTournament");
 });
 
 $app->add(new CorsMiddleware());
